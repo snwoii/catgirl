@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>catgirls</title>
+    <link rel="stylesheet" type="text/CSS" href="nya.css">
+    <script>
+      function getCatgirl() {
+        const url = 'https://nekos.life/api/v2/img/neko';
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const catgirlImg = document.getElementById('catgirl-img');
+            catgirlImg.src = data.url;
+            catgirlImg.style.maxWidth = '960px';
+            catgirlImg.style.maxHeight = '540px';
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="getCatgirl()" id="button">nyaa~</button>
+    <br><br>
+    <img id="catgirl-img">
+
+    <div class="marquee">
+        <div class="marqueeone">catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="marqueetwo">catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;</div>
+        <div class="marqueethree">catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;</div>
+        <div class="marqueefour">catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;
+            catgirls &nbsp;&nbsp;&nbsp; 
+            catgirls &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+  </body>
+</html>
